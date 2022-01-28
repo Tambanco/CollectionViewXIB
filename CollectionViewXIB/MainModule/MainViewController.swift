@@ -9,20 +9,21 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var collectionView: UICollectionView!
+    var collectionView: UICollectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewLayout.init())
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initCollectionView()
-    }
-    
-    func initCollectionView() {
-        collectionView = UICollectionView()
+        let layout = UICollectionViewFlowLayout()
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        layout.scrollDirection = .vertical
+        self.view.addSubview(collectionView)
         
-        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.reuseId)
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.reuseId)
+        
     }
 }
 
