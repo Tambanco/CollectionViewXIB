@@ -8,10 +8,21 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        initCollectionView()
+    }
+    
+    func initCollectionView() {
+        collectionView = UICollectionView()
+        
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.reuseId)
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
 }
 
@@ -21,6 +32,8 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
+        cell.backgroundColor = .gray
+        return cell
     }
 }
