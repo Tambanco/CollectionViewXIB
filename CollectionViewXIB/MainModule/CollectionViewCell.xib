@@ -17,17 +17,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="387" height="244"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-3Z-HlW">
-                        <rect key="frame" x="20" y="67" width="347" height="151"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MbN-3Z-HlW">
+                        <rect key="frame" x="20" y="111" width="347" height="20.5"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-hl-DVv">
-                        <rect key="frame" x="20" y="20" width="50" height="33"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQm-hl-DVv">
+                        <rect key="frame" x="20" y="64" width="347" height="33"/>
                         <color key="backgroundColor" red="0.33333333329999998" green="0.63137254899999995" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="system" pointSize="27"/>
                         <nil key="textColor"/>
@@ -37,6 +35,14 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" systemColor="systemOrangeColor"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="FQm-hl-DVv" secondAttribute="trailing" constant="20" id="DcS-co-wJ7"/>
+                <constraint firstItem="MbN-3Z-HlW" firstAttribute="top" secondItem="FQm-hl-DVv" secondAttribute="bottom" constant="14" id="QIz-vt-xGl"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="MbN-3Z-HlW" secondAttribute="trailing" constant="20" id="UXy-DW-7z2"/>
+                <constraint firstItem="FQm-hl-DVv" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="na5-fk-T2i"/>
+                <constraint firstItem="FQm-hl-DVv" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="20" id="vYd-P0-wez"/>
+                <constraint firstItem="MbN-3Z-HlW" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="yzr-wB-0dx"/>
+            </constraints>
             <size key="customSize" width="387" height="244"/>
             <connections>
                 <outlet property="descriptionLabel" destination="MbN-3Z-HlW" id="9k5-iG-Tg6"/>
